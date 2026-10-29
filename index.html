@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Shooting Lessons | Give More Training</title>
+<meta name="description" content="GMT Shooting Lessons in St. Peters, MO. 45-minute Saturday sessions that build a stronger, more confident shot. All ages and skill levels, $40 per session.">
+<meta property="og:title" content="GMT Shooting Lessons | Give More Training">
+<meta property="og:description" content="Saturday shooting lessons at GMT in St. Peters, MO. Gym stations plus shooting-lane technique. All ages and skill levels, $40 per session.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://online.gmbm.com">
+<link rel="preconnect" href="https://backend.leadconnectorhq.com">
+<link rel="preconnect" href="https://stcdn.leadconnectorhq.com">
+<link rel="preload" as="image" href="assets/img/hero-lanes-900.webp" media="(max-width: 899px)">
+<link rel="preload" as="image" href="assets/img/hero-lanes.webp" media="(min-width: 900px)">
+<style>
+  :root {
+    --black: #000;
+    --char: #141414;
+    --sand: #dbcfbd;
+    --sand-deep: #c9b99f;
+    --sand-soft: #f4efe7;
+    --gray: #787979;
+    --muted: #5c5d5d;
+    --line: #e4ddd1;
+    --white: #fff;
+    --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    --body: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  }
+
+  /* Mobile first: base styles target phones, min-width queries scale up. */
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; font-weight: 400; }
+
+  .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gray);
+  }
+  .on-dark .eyebrow { color: var(--sand); }
+  .h2 {
+    font-family: var(--display);
+    font-size: clamp(40px, 10vw, 64px);
+    line-height: .95;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  .lead { font-size: 17px; color: var(--muted); margin: 16px 0 0; max-width: 620px; text-wrap: pretty; }
+  .on-dark .lead { color: rgba(255, 255, 255, .78); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 54px; padding: 0 28px;
+    background: var(--sand); color: var(--black);
+    font-family: var(--body); font-size: 14px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    text-decoration: none; border: 0; cursor: pointer;
+    transition: background .15s, color .15s;
+  }
+  .btn:hover { background: var(--white); }
+  .btn-dark { background: var(--black); color: var(--white); }
+  .btn-dark:hover { background: var(--char); color: var(--sand); }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--sand-deep); outline-offset: 3px; }
+
+  /* Logo: GMT mark from the brand kit plus the wordmark set in Helvetica, like the brand "Wordmark Combined". */
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); text-decoration: none; }
+  .brand svg { width: 52px; height: auto; fill: currentColor; }
+  .brand span { font-size: 17px; letter-spacing: -.04em; line-height: 1; }
+
+  /* Top bar */
+  .topbar { background: var(--black); color: var(--white); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 54px; }
+  .topbar-loc { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--sand); white-space: nowrap; }
+
+  /* Hero. On phones it is only a title row so the calendar sits above the fold. */
+  .hero { position: relative; background: var(--black); color: var(--white); overflow: hidden; }
+  .hero-bg { position: absolute; left: 0; right: 0; top: 0; height: 300px; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; opacity: .5; }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .7) 55%, #000 100%);
+  }
+  .hero-grid { position: relative; padding-top: 12px; padding-bottom: 28px; }
+
+  .hero-copy { padding-bottom: 12px; }
+  .hero-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  h1 {
+    font-family: var(--display);
+    font-size: 34px; line-height: 1; letter-spacing: .02em; text-transform: uppercase;
+  }
+  h1 .kicker { display: none; }
+  .price-pill {
+    flex: 0 0 auto;
+    background: var(--sand); color: var(--black);
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    padding: 7px 10px; white-space: nowrap;
+  }
+  .hero-eyebrow, .hero-lede, .hero-facts, .hero-proof { display: none; }
+
+  .hero-facts { list-style: none; padding: 0; margin: 28px 0 0; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(219, 207, 189, .25); max-width: 560px; }
+  .hero-facts li { background: rgba(0, 0, 0, .55); padding: 14px 16px; }
+  .fact-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--sand); }
+  .fact-value { display: block; font-family: var(--display); font-size: 26px; line-height: 1.1; letter-spacing: .02em; margin-top: 4px; }
+
+  .hero-proof { display: none; align-items: center; gap: 14px; margin-top: 28px; max-width: 560px; }
+  .hero-proof img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 2px solid var(--sand); flex: 0 0 auto; }
+  .hero-proof p { margin: 0; font-size: 15px; color: rgba(255, 255, 255, .8); }
+  .hero-proof strong { color: var(--white); }
+
+  /* Booking widget */
+  .booking { scroll-margin-top: 12px; }
+  .booking-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, .45); }
+  .booking-note {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px;
+    margin: 14px 0 0; padding: 0; list-style: none;
+    font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sand);
+  }
+  .booking-note li { display: flex; align-items: center; gap: 6px; }
+  .booking-note li::before { content: ""; width: 6px; height: 6px; background: var(--sand); }
+
+  .calendar-mount { position: relative; --cal-h: 760px; min-height: 200px; }
+  .calendar-mount iframe { display: block; width: 100%; min-height: 420px; border: 0; overflow: hidden; }
+  .calendar-mount.is-loading { min-height: var(--cal-h); }
+  .calendar-mount.is-ready iframe { animation: fade-in .4s ease both; }
+
+  /* Placeholder shaped like the booking widget, shown until the embed script reveals it.
+     --cal-h matches the widget's first-render height so nothing jumps on the swap. */
+  .cal-skeleton {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 1;
+    height: var(--cal-h); overflow: hidden;
+    background: #fff; border: 1px solid #e4e7ec; border-radius: 10px;
+    padding: 26px 17px;
+    transition: opacity .4s ease;
+  }
+  .calendar-mount.is-ready .cal-skeleton { opacity: 0; pointer-events: none; }
+  .sk {
+    display: block; border-radius: 6px;
+    background: linear-gradient(90deg, #eef0f2 25%, #f7f8f9 45%, #eef0f2 65%);
+    background-size: 300% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+  .sk-title { height: 26px; width: 70%; margin-bottom: 26px; }
+  .sk-info { display: grid; gap: 16px; border: 1px solid #eef0f2; border-radius: 10px; padding: 20px 16px; margin-bottom: 30px; }
+  .sk-row { display: flex; align-items: center; gap: 12px; }
+  .sk-icon { width: 20px; height: 20px; border-radius: 50%; flex: 0 0 auto; }
+  .sk-line { height: 12px; }
+  .sk-month { height: 18px; width: 46%; margin: 0 auto 28px; }
+  .sk-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px 6px; justify-items: center; }
+  .sk-wk { width: 26px; height: 12px; margin-bottom: 6px; }
+  .sk-day { width: 30px; height: 30px; border-radius: 50%; }
+  .sk-tz-label { height: 14px; width: 26%; margin: 56px 0 16px; }
+  .sk-tz { height: 16px; width: 82%; }
+  .cal-loading {
+    position: absolute; left: 50%; top: 50%; z-index: 2; transform: translate(-50%, -50%);
+    display: flex; align-items: center; gap: 10px;
+    background: #fff; border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 18px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+    font-size: 14px; font-weight: 500; color: #333; white-space: nowrap;
+  }
+  .spinner {
+    flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%;
+    border: 2.5px solid #ece6dc; border-top-color: var(--black);
+    animation: spin .8s linear infinite;
+  }
+
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Sections */
+  .section { padding-top: 64px; padding-bottom: 64px; }
+  .section-dark { background: var(--black); color: var(--white); }
+  .section-sand { background: var(--sand-soft); }
+  .section-head { max-width: 760px; margin-bottom: 32px; }
+
+  /* How a session runs */
+  .steps { display: grid; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .step { background: var(--white); border: 1px solid var(--line); }
+  .step-img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--char); }
+  .step-img img { width: 100%; height: 100%; object-fit: cover; }
+  .step-body { padding: 20px 20px 24px; }
+  .step-num { font-family: var(--display); font-size: 18px; letter-spacing: .08em; color: var(--gray); }
+  .step h3 { font-family: var(--display); font-size: 32px; line-height: 1; letter-spacing: .02em; text-transform: uppercase; margin: 4px 0 10px; }
+  .step p { margin: 0; color: var(--muted); }
+  .step-time {
+    display: inline-block; margin-top: 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    background: var(--black); color: var(--sand); padding: 6px 10px;
+  }
+
+  /* Who it's for */
+  .split { display: grid; gap: 32px; align-items: center; }
+  .split-media { position: relative; }
+  .split-media .main { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; }
+  .split-media .inset {
+    position: absolute; right: -6px; bottom: -28px; width: 38%; aspect-ratio: 2 / 3; object-fit: cover;
+    border: 6px solid var(--black);
+  }
+  .checks { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px; }
+  .checks li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; }
+  .checks li::before {
+    content: ""; width: 28px; height: 28px; background: var(--sand);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z'/%3E%3C/svg%3E") center / 22px no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z'/%3E%3C/svg%3E") center / 22px no-repeat;
+  }
+  .checks strong { display: block; font-size: 17px; }
+  .checks span { color: rgba(255, 255, 255, .72); font-size: 15px; }
+
+  /* Session details */
+  .details { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0; }
+  .details div { background: var(--white); padding: 18px 16px 20px; }
+  .details dt { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gray); }
+  .details dd { margin: 6px 0 0; font-family: var(--display); font-size: 28px; line-height: 1.05; letter-spacing: .02em; }
+  .details dd small { display: block; font-family: var(--body); font-size: 13px; letter-spacing: 0; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+  .details-cta { margin-top: 28px; }
+  .details-cta .btn { width: 100%; }
+
+  /* Jeff */
+  .coach { display: grid; gap: 32px; }
+  .coach-photo { position: relative; }
+  .coach-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+  .coach-photo figcaption {
+    position: absolute; left: 0; bottom: 0;
+    background: var(--sand); color: var(--black);
+    font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 8px 12px;
+  }
+  .coach-body p { color: rgba(255, 255, 255, .78); margin: 16px 0 0; text-wrap: pretty; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(219, 207, 189, .3); margin: 28px 0 0; padding: 0; list-style: none; }
+  .stats li { background: var(--black); padding: 16px 4px 16px 0; }
+  .stats li:nth-child(even) { padding-left: 16px; }
+  .stats b { display: block; font-family: var(--display); font-weight: 400; font-size: 46px; line-height: 1; color: var(--sand); }
+  .stats span { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .75); }
+  .career { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+  .career figure { margin: 0; }
+  .career img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .career figcaption { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--sand); margin-top: 8px; }
+  .coach .coach-role, .coach-card .coach-role {
+    margin: 0 0 6px;
+    font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--sand);
+  }
+  .coach-name { font-family: var(--display); font-size: clamp(40px, 9vw, 56px); line-height: .95; letter-spacing: .01em; text-transform: uppercase; }
+
+  .coach-team-label {
+    margin: 48px 0 16px; padding-top: 28px; border-top: 1px solid rgba(219, 207, 189, .25);
+    font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--sand);
+  }
+  .coach-team { display: grid; gap: 16px; }
+  .coach-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; border: 1px solid rgba(219, 207, 189, .25); padding: 12px; }
+  .coach-card-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .coach-ph { display: flex; align-items: center; justify-content: center; background: var(--char); color: var(--sand); }
+  .coach-ph svg { width: 42%; height: auto; fill: currentColor; }
+  .coach-card .coach-name { font-size: 32px; }
+  .coach-card-body p:last-child { margin: 8px 0 0; font-size: 15px; color: rgba(255, 255, 255, .75); text-wrap: pretty; }
+
+  .leagues { margin-top: 56px; text-align: center; }
+  .leagues p { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--sand); margin: 0 0 20px; }
+  .league-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 22px 30px; }
+  .league-row img { height: 40px; width: auto; filter: grayscale(1) brightness(1.6); opacity: .75; }
+
+  /* Testimonials */
+  .quotes { display: grid; gap: 16px; }
+  .quote { display: grid; grid-template-columns: 84px 1fr; gap: 16px; background: var(--white); border: 1px solid var(--line); padding: 16px; margin: 0; }
+  .quote img { width: 84px; height: 105px; object-fit: cover; object-position: 50% 20%; }
+  .quote blockquote { margin: 0; font-size: 15px; line-height: 1.5; }
+  .quote figcaption { margin-top: 10px; }
+  .quote figcaption strong { display: block; font-family: var(--display); font-weight: 400; font-size: 22px; letter-spacing: .03em; line-height: 1; }
+  .quote figcaption span { display: block; margin-top: 6px; line-height: 1.4; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gray); }
+
+  /* Gym */
+  .gym-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gym-grid figure { margin: 0; position: relative; overflow: hidden; background: var(--char); }
+  .gym-grid img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1; }
+  .gym-grid .wide { grid-column: span 2; }
+  .gym-grid .wide img { aspect-ratio: 3 / 2; }
+  .gym-grid figcaption {
+    position: absolute; left: 0; bottom: 0;
+    background: rgba(0, 0, 0, .78); color: var(--sand);
+    font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 6px 9px;
+  }
+  .address { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 24px; }
+  .address p { margin: 0; font-weight: 700; }
+  .address a { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-underline-offset: 4px; }
+
+  /* FAQ */
+  .faq { border-top: 1px solid var(--line); max-width: 820px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    padding: 20px 0; font-size: 17px; font-weight: 700;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--display); font-size: 30px; line-height: 1; color: var(--gray); transition: transform .2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: -6px 0 20px; color: var(--muted); max-width: 680px; }
+
+  /* Final CTA */
+  .final { position: relative; background: var(--black); color: var(--white); text-align: center; overflow: hidden; }
+  .final-bg { position: absolute; inset: 0; }
+  .final-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .32; }
+  .final .wrap { position: relative; }
+  .final .h2 { font-size: clamp(46px, 12vw, 88px); }
+  .final .lead { margin-left: auto; margin-right: auto; }
+  .final .btn { margin-top: 28px; }
+  .motto { font-family: var(--display); font-size: 20px; letter-spacing: .3em; color: var(--sand); margin: 28px 0 0; }
+
+  footer { background: var(--black); color: rgba(255, 255, 255, .6); font-size: 13px; padding: 36px 0 96px; border-top: 1px solid #222; }
+  footer .wrap { display: grid; gap: 16px; }
+  footer p { margin: 0; }
+
+  /* Sticky booking button, shown once the calendar has scrolled out of view. */
+  .sticky-cta {
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20;
+    transform: translateY(calc(100% + 40px)); transition: transform .3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  }
+  .sticky-cta.is-visible { transform: none; }
+  .sticky-cta .btn { width: 100%; }
+
+  @media (min-width: 640px) {
+    .brand svg { width: 60px; }
+    .brand span { font-size: 19px; }
+    .topbar .wrap { height: 64px; }
+    .topbar-loc { font-size: 12px; }
+    h1 { font-size: 44px; }
+    .section { padding-top: 88px; padding-bottom: 88px; }
+    .lead { font-size: 18px; }
+    .details { grid-template-columns: repeat(3, 1fr); }
+    .details-cta .btn { width: auto; }
+    .quotes { grid-template-columns: 1fr 1fr; }
+    .gym-grid { grid-template-columns: repeat(4, 1fr); }
+    .gym-grid .wide img { aspect-ratio: auto; height: 100%; }
+    .stats { grid-template-columns: repeat(4, 1fr); }
+    .stats li, .stats li:nth-child(even) { padding: 16px 12px 16px 16px; }
+    .stats li:first-child { padding-left: 0; }
+    .coach-card { grid-template-columns: 168px 1fr; gap: 24px; padding: 16px; }
+    .coach-card .coach-name { font-size: 40px; }
+    .league-row img { height: 48px; }
+    .sticky-cta { left: auto; right: 24px; bottom: 24px; }
+    .sticky-cta .btn { width: auto; }
+    footer .wrap { grid-template-columns: 1fr auto; align-items: center; }
+  }
+
+  @media (min-width: 900px) {
+    .hero-bg { inset: 0; height: auto; }
+    .hero-bg img { opacity: .55; object-position: 50% 50%; }
+    .hero-bg::after { background: linear-gradient(90deg, rgba(0, 0, 0, .92) 0%, rgba(0, 0, 0, .7) 45%, rgba(0, 0, 0, .35) 100%); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 48px; align-items: start; padding-top: 56px; padding-bottom: 72px; }
+    .hero-copy { padding-top: 24px; padding-bottom: 0; }
+    .hero-title-row { display: block; }
+    .price-pill { display: none; }
+    .hero-eyebrow { display: block; }
+    h1 { font-size: clamp(76px, 8.4vw, 116px); line-height: .88; }
+    h1 .kicker { display: block; color: var(--sand); font-size: .5em; letter-spacing: .06em; margin-bottom: 6px; }
+    .hero-lede { display: block; font-size: 19px; color: rgba(255, 255, 255, .82); margin: 22px 0 0; max-width: 540px; text-wrap: pretty; }
+    .hero-facts { display: grid; }
+    .hero-proof { display: flex; }
+    .booking-note { justify-content: flex-start; }
+    .calendar-mount { --cal-h: 805px; }
+
+    .steps { grid-template-columns: repeat(3, 1fr); }
+    .split { grid-template-columns: 1.1fr 1fr; gap: 72px; }
+    .coach { grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+    .coach-team { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .quotes { grid-template-columns: repeat(4, 1fr); }
+    .quote { grid-template-columns: 1fr; padding: 0; }
+    .quote img { width: 100%; height: auto; aspect-ratio: 4 / 5; }
+    .quote > div { padding: 0 18px 20px; }
+    .gym-layout { display: grid; grid-template-columns: 4fr 7fr; gap: 56px; align-items: center; }
+  }
+
+  @media (min-width: 1100px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr) 460px; gap: 72px; }
+    .calendar-mount { --cal-h: 817px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Give More Training">
+      <svg viewBox="46 40 308 116" aria-hidden="true">
+        <path d="M159.88,64.6h-65.03s-19.16,0-19.16,22.11,19.11,22.11,19.11,22.11h19.38l22.79,22.79-48.1.26s-41.44,0-41.44-45.16,41.29-44.9,41.29-44.9h54.11l17.06,17.68v5.11Z"/>
+        <polygon points="116.34 86.82 160.14 86.82 160.14 154.24 137.6 131.71 137.6 108.8 116.34 86.82"/>
+        <polygon points="278.36 41.81 322.16 41.81 352.58 41.81 352.58 63.8 322.16 63.8 322.16 131.87 299.62 131.87 299.62 63.78 278.36 41.81"/>
+        <polygon points="197.56 64.6 197.56 131.87 175.02 131.87 175.02 63.78 153.76 41.81 267.8 41.81 285.15 59.47 285.15 131.87 262.62 131.87 262.62 64.6 241.35 64.6 241.35 131.87 218.82 131.87 218.82 64.6 197.56 64.6"/>
+      </svg>
+      <span>GiveMoreTraining.</span>
+    </a>
+    <span class="topbar-loc">St. Peters, MO</span>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <picture>
+        <source media="(min-width: 900px)" srcset="assets/img/hero-lanes.webp">
+        <img src="assets/img/hero-lanes-900.webp" alt="" width="900" height="600" fetchpriority="high">
+      </picture>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow">New at Give More Training</p>
+        <div class="hero-title-row">
+          <h1 id="hero-title"><span class="kicker">GMT</span> Shooting Lessons</h1>
+          <span class="price-pill">Sat &middot; $40</span>
+        </div>
+        <p class="hero-lede">Build a stronger, more confident shot. 45-minute sessions that pair gym work built around your shot with technique reps in our shooting lanes. Any age, any skill level.</p>
+        <ul class="hero-facts">
+          <li><span class="fact-label">When</span><span class="fact-value">Saturdays 8&ndash;11 AM</span></li>
+          <li><span class="fact-label">Session</span><span class="fact-value">45 min + 15 open</span></li>
+          <li><span class="fact-label">Price</span><span class="fact-value">$40 per session</span></li>
+          <li><span class="fact-label">Group size</span><span class="fact-value">Max 12 shooters</span></li>
+        </ul>
+        <div class="hero-proof">
+          <img src="assets/img/jeff-headshot.webp" alt="" width="666" height="1000" loading="lazy">
+          <p>Built on <strong>Jeff LoVecchio's</strong> system. 10+ years of pro hockey, 200+ pro clients and 30,000+ athletes trained.</p>
+        </div>
+      </div>
+
+      <div class="booking" id="book">
+        <div class="booking-card">
+          <div class="calendar-mount is-loading" id="calendar-mount">
+            <div class="cal-skeleton">
+              <div aria-hidden="true">
+                <span class="sk sk-title"></span>
+                <div class="sk-info">
+                  <div class="sk-row"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:22%"></span></div>
+                  <div class="sk-row"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:48%"></span></div>
+                  <div class="sk-row"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:58%"></span></div>
+                  <div class="sk-row"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:52%"></span></div>
+                </div>
+                <span class="sk sk-month"></span>
+                <div class="sk-grid" id="sk-grid"></div>
+                <span class="sk sk-tz-label"></span>
+                <span class="sk sk-tz"></span>
+              </div>
+              <div class="cal-loading" role="status">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>Loading open Saturdays&hellip;</span>
+              </div>
+            </div>
+            <noscript>
+              <iframe src="https://online.gmbm.com/widget/booking/HT7YX93D2NCj6Hrv1fwF" allow="payment" style="width:100%;border:none;overflow:hidden;min-height:800px" scrolling="no" title="Book a GMT Shooting Lesson"></iframe>
+            </noscript>
+          </div>
+        </div>
+        <ul class="booking-note">
+          <li>45-min sessions</li>
+          <li>Kids to adults</li>
+          <li>Max 12 per group</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Start the booking widget as early as possible. The page's own params (utm_*, fbclid, etc.)
+    // are passed through to the widget so GHL attributes the booking.
+    (function () {
+      var grid = document.getElementById('sk-grid');
+      for (var w = 0; w < 7; w++) grid.insertAdjacentHTML('beforeend', '<span class="sk sk-wk"></span>');
+      for (var d = 0; d < 35; d++) grid.insertAdjacentHTML('beforeend', '<span class="sk sk-day"></span>');
+
+      var frame = document.createElement('iframe');
+      frame.src = 'https://online.gmbm.com/widget/booking/HT7YX93D2NCj6Hrv1fwF' + window.location.search;
+      frame.id = 'HT7YX93D2NCj6Hrv1fwF_1793294217275';
+      frame.allow = 'payment';
+      frame.setAttribute('scrolling', 'no');
+      frame.title = 'Book a GMT Shooting Lesson';
+      document.getElementById('calendar-mount').appendChild(frame);
+    })();
+  </script>
+
+  <section class="section section-sand" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How every session runs</p>
+        <h2 class="h2" id="how-title">Strength and confidence behind every shot</h2>
+        <p class="lead">Each lesson builds your shot from the ground up: exercises in the gym that carry over to shooting and puck handling, then technique work in the shooting lanes. Every drill is progressed or regressed to fit you.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-img"><img src="assets/img/session-gym.webp" alt="Young player training on gymnastic rings at GMT" width="1200" height="800" loading="lazy"></div>
+          <div class="step-body">
+            <span class="step-num">01</span>
+            <h3>Gym stations</h3>
+            <p>Station work with exercises that correlate directly to shooting and puck handling, so you build the strength your shot actually uses.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-img"><img src="assets/img/session-lanes.webp" alt="Player shooting pucks at goalie targets in the GMT shooting lanes" width="667" height="1000" loading="lazy" style="object-position:50% 62%"></div>
+          <div class="step-body">
+            <span class="step-num">02</span>
+            <h3>Shooting lanes</h3>
+            <p>Shooting technique on synthetic ice in our lanes, turning that strength into a harder, more accurate, more confident shot.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-img"><img src="assets/img/session-open.webp" alt="A pile of pucks in front of a shooting target" width="666" height="1000" loading="lazy" style="object-position:50% 70%"></div>
+          <div class="step-body">
+            <span class="step-num">03</span>
+            <h3>Open 15</h3>
+            <p>After every session, stick around for 15 minutes to use the equipment and work on what you learned on your own.</p>
+            <span class="step-time">Included with every session</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-dark on-dark" aria-labelledby="who-title">
+    <div class="wrap split">
+      <div class="split-media">
+        <img class="main" src="assets/img/kids-lanes.webp" alt="Kids with sticks working on their shot in the GMT shooting lanes" width="1400" height="934" loading="lazy">
+        <img class="inset" src="assets/img/jeff-shooting.webp" alt="Jeff LoVecchio taking a shot in the GMT shooting room" width="733" height="1100" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow">Who it's for</p>
+        <h2 class="h2" id="who-title">Every shooter. Every level.</h2>
+        <p class="lead">From your first wrist shot to fine-tuning a college-level release, sessions meet you where you are. Coaches scale every drill up or down to fit each shooter's needs and goals.</p>
+        <ul class="checks">
+          <li><div><strong>Beginners</strong><span>Learn the fundamentals and get comfortable getting pucks off the ice.</span></div></li>
+          <li><div><strong>Experienced players</strong><span>Add strength, power and accuracy to the shot you already have.</span></div></li>
+          <li><div><strong>Kids and adults</strong><span>Youth players and adults all train here, each at the right level.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="details-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Session details</p>
+        <h2 class="h2" id="details-title">Saturdays at GMT</h2>
+      </div>
+      <dl class="details">
+        <div><dt>Day</dt><dd>Saturdays<small>Year-round. We'll let you know ahead of time if a Saturday is off.</small></dd></div>
+        <div><dt>Times</dt><dd>8, 9 &amp; 10 AM<small>Pick the slot that fits your morning.</small></dd></div>
+        <div><dt>Length</dt><dd>45 minutes<small>Plus 15 minutes of open time on the equipment after.</small></dd></div>
+        <div><dt>Price</dt><dd>$40<small>Per session.</small></dd></div>
+        <div><dt>Group size</dt><dd>Max 12<small>Small groups so every shooter gets coached.</small></dd></div>
+        <div><dt>Who</dt><dd>All ages &amp; levels<small>Beginner to expert, kids to adults.</small></dd></div>
+      </dl>
+      <div class="details-cta"><a class="btn btn-dark" href="#book">Pick your Saturday</a></div>
+    </div>
+  </section>
+
+  <section class="section section-dark on-dark" aria-labelledby="coach-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Your coaches</p>
+        <h2 class="h2" id="coach-title">Coached by the GMT team</h2>
+      </div>
+      <div class="coach">
+        <figure class="coach-photo" style="margin:0">
+          <img src="assets/img/jeff-headshot.webp" alt="Jeff LoVecchio, founder of Give More Training" width="666" height="1000" loading="lazy">
+        </figure>
+        <div class="coach-body">
+          <p class="coach-role">Founder &middot; Give More Training</p>
+          <h3 class="coach-name">Jeff LoVecchio</h3>
+          <p>Jeff played more than 10 years of pro hockey, including time in the Boston Bruins organization, after captaining Western Michigan as a sophomore. Jeff studied exercise science and has spent 18+ years coaching, as strength coach for NCAA D1, D3 and junior programs and as the trainer behind 200+ pro clients.</p>
+          <p>GMT is the gym Jeff built in St. Peters so players of every age can train with the same intent and standards as the pros. Shooting Lessons bring that approach to your shot.</p>
+          <ul class="stats">
+            <li><b>10+</b><span>Years pro hockey</span></li>
+            <li><b>200+</b><span>Pro clients</span></li>
+            <li><b>30K+</b><span>Athletes trained</span></li>
+            <li><b>18+</b><span>Years coaching</span></li>
+          </ul>
+          <div class="career">
+            <figure>
+              <img src="assets/img/jeff-bruins.webp" alt="Jeff LoVecchio playing for the Boston Bruins" width="1024" height="677" loading="lazy">
+              <figcaption>Boston Bruins organization</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/jeff-wmu.webp" alt="Jeff LoVecchio playing for Western Michigan" width="1200" height="797" loading="lazy">
+              <figcaption>Captain, Western Michigan</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <p class="coach-team-label">Leading your Saturday sessions</p>
+      <div class="coach-team">
+        <article class="coach-card">
+          <img class="coach-card-img" src="assets/img/coach-zach.webp" alt="Zach Jordan, GMT coach" width="640" height="800" loading="lazy">
+          <div class="coach-card-body">
+            <p class="coach-role">Shooting Lessons Coach</p>
+            <h3 class="coach-name">Zach Jordan</h3>
+            <p>Former assistant captain at the University of Nebraska Omaha who went on to play pro hockey in the AHL and ECHL. Zach runs the stations and shooting lanes, matching every drill to each shooter's level.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <!-- Placeholder until GMT sends a photo of Chris: swap this div for an img with class="coach-card-img". -->
+          <div class="coach-card-img coach-ph" role="img" aria-label="Chris Peak, GMT coach">
+            <svg viewBox="70 84 216 230" aria-hidden="true"><path d="M279.93,162.59h-106.14s-31.28,0-31.28,36.08,31.18,36.08,31.18,36.08h31.63l37.2,37.2-78.51.43s-67.64,0-67.64-73.71,67.39-73.28,67.39-73.28h116.16v37.2Z"/><polygon points="208.86 198.87 280.34 198.87 280.34 308.91 243.56 272.13 243.56 234.73 208.86 198.87"/></svg>
+          </div>
+          <div class="coach-card-body">
+            <p class="coach-role">Shooting Lessons Coach</p>
+            <h3 class="coach-name">Chris Peak</h3>
+            <p>Chris coaches Saturday Shooting Lessons alongside Zach, keeping every station moving and every shooter on the right progression.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="leagues">
+        <p>GMT trains players at every level</p>
+        <div class="league-row">
+          <img src="assets/logos/nhl.webp" alt="NHL" width="211" height="240" loading="lazy">
+          <img src="assets/logos/ahl.webp" alt="AHL" width="240" height="240" loading="lazy">
+          <img src="assets/logos/echl.webp" alt="ECHL" width="240" height="231" loading="lazy">
+          <img src="assets/logos/ncaa.webp" alt="NCAA" width="240" height="240" loading="lazy">
+          <img src="assets/logos/ushl.webp" alt="USHL" width="192" height="240" loading="lazy">
+          <img src="assets/logos/nahl.webp" alt="NAHL" width="240" height="183" loading="lazy">
+          <img src="assets/logos/usa-hockey.webp" alt="USA Hockey" width="240" height="119" loading="lazy">
+          <img src="assets/logos/hockey-canada.webp" alt="Hockey Canada" width="240" height="224" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sand" aria-labelledby="quotes-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What players say</p>
+        <h2 class="h2" id="quotes-title">From first lessons to the NHL</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote">
+          <img src="assets/players/frederic.webp" alt="Trent Frederic" width="320" height="400" loading="lazy">
+          <div>
+            <blockquote>&ldquo;I can't thank Jeff enough for the training we do and how he's been able to take my game to the next level.&rdquo;</blockquote>
+            <figcaption><strong>Trent Frederic</strong><span>Forward, Edmonton Oilers</span></figcaption>
+          </div>
+        </figure>
+        <figure class="quote">
+          <img src="assets/players/woll.webp" alt="Joseph Woll" width="320" height="400" loading="lazy">
+          <div>
+            <blockquote>&ldquo;Jeff has really helped me tailor my training to be specific and helped me develop strength in the end-ranges of my movements.&rdquo;</blockquote>
+            <figcaption><strong>Joseph Woll</strong><span>Goaltender, Toronto Maple Leafs</span></figcaption>
+          </div>
+        </figure>
+        <figure class="quote">
+          <img src="assets/players/wideman.webp" alt="Chris Wideman" width="285" height="400" loading="lazy">
+          <div>
+            <blockquote>&ldquo;Jeff has gotten me into the best shape of my life, and I was able to have some of my best seasons after training with him.&rdquo;</blockquote>
+            <figcaption><strong>Chris Wideman</strong><span>Defenseman, Montreal Canadiens</span></figcaption>
+          </div>
+        </figure>
+        <figure class="quote">
+          <img src="assets/players/larrigan.webp" alt="Jack Larrigan" width="320" height="400" loading="lazy">
+          <div>
+            <blockquote>&ldquo;I met Jeff when I was 9 and have trained with him every off-season since. The way he pushes me to get better every day has shaped me into the person I am today.&rdquo;</blockquote>
+            <figcaption><strong>Jack Larrigan</strong><span>Forward, University of Notre Dame</span></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="gym-title">
+    <div class="wrap gym-layout">
+      <div class="section-head" style="margin-bottom:28px">
+        <p class="eyebrow">The gym</p>
+        <h2 class="h2" id="gym-title">Train where the pros train</h2>
+        <p class="lead">Turf, a full strength floor and synthetic-ice shooting lanes, all under one roof. The same space where Jeff trains pro and college players.</p>
+        <div class="address">
+          <p>5252 Mexico Road, St. Peters, MO 63376</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=5252+Mexico+Road+St.+Peters+MO+63376" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="gym-grid">
+        <figure class="wide"><img src="assets/img/gym-turf.webp" alt="GMT turf area with the American flag and We Do The Work wall" width="1400" height="934" loading="lazy"><figcaption>Turf</figcaption></figure>
+        <figure><img src="assets/img/gym-floor.webp" alt="GMT strength floor with racks and GMT logos" width="733" height="1100" loading="lazy"><figcaption>Strength floor</figcaption></figure>
+        <figure><img src="assets/img/gym-wall.webp" alt="Players warming up at GMT" width="733" height="1100" loading="lazy"><figcaption>Team training</figcaption></figure>
+        <figure class="wide"><img src="assets/img/hero-lanes-900.webp" alt="Three synthetic-ice shooting lanes with goalie targets" width="900" height="600" loading="lazy"><figcaption>Shooting lanes</figcaption></figure>
+        <figure><img src="assets/img/jeff-coaching.webp" alt="Jeff LoVecchio coaching a group at GMT" width="733" height="1100" loading="lazy"><figcaption>Coached by GMT</figcaption></figure>
+        <figure><img src="assets/img/kids-group.webp" alt="Youth players lining up for a drill at GMT" width="1200" height="800" loading="lazy"><figcaption>Youth sessions</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sand" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="h2" id="faq-title">Good questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do I need to be a good shooter already?</summary>
+          <p>No. Sessions are built for every skill level, from beginner to expert. Every drill can be progressed or regressed so it fits your needs and goals.</p>
+        </details>
+        <details>
+          <summary>Is this for kids or adults?</summary>
+          <p>Both. Kids, teens and adults are all welcome, and coaches adjust each drill to the shooter in front of them.</p>
+        </details>
+        <details>
+          <summary>What happens in a session?</summary>
+          <p>45 minutes of station work: exercises in the gym that correlate to shooting and puck handling, plus shooting technique in the shooting lanes. Afterward you can stay for 15 minutes to use the equipment and practice what you learned.</p>
+        </details>
+        <details>
+          <summary>When are sessions and how many people are in each?</summary>
+          <p>Saturdays at 8, 9 and 10 AM, year-round. Each session is capped at 12 shooters. If we're ever unavailable on a Saturday, we'll let you know ahead of time.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>$40 per session. You'll see the total when you book.</p>
+        </details>
+        <details>
+          <summary>Where is GMT?</summary>
+          <p>5252 Mexico Road, St. Peters, MO 63376.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final on-dark" aria-labelledby="final-title">
+    <div class="final-bg" aria-hidden="true"><img src="assets/img/jeff-shooting.webp" alt="" width="733" height="1100" loading="lazy" style="object-position:50% 40%"></div>
+    <div class="wrap">
+      <p class="eyebrow">Spots are capped at 12</p>
+      <h2 class="h2" id="final-title">Grab your Saturday spot</h2>
+      <p class="lead">Pick a date, choose 8, 9 or 10 AM and you're in. $40 per session.</p>
+      <a class="btn" href="#book">Book a session</a>
+      <p class="motto">Give More &middot; Be More</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Give More Training">
+      <svg viewBox="46 40 308 116" aria-hidden="true">
+        <path d="M159.88,64.6h-65.03s-19.16,0-19.16,22.11,19.11,22.11,19.11,22.11h19.38l22.79,22.79-48.1.26s-41.44,0-41.44-45.16,41.29-44.9,41.29-44.9h54.11l17.06,17.68v5.11Z"/>
+        <polygon points="116.34 86.82 160.14 86.82 160.14 154.24 137.6 131.71 137.6 108.8 116.34 86.82"/>
+        <polygon points="278.36 41.81 322.16 41.81 352.58 41.81 352.58 63.8 322.16 63.8 322.16 131.87 299.62 131.87 299.62 63.78 278.36 41.81"/>
+        <polygon points="197.56 64.6 197.56 131.87 175.02 131.87 175.02 63.78 153.76 41.81 267.8 41.81 285.15 59.47 285.15 131.87 262.62 131.87 262.62 64.6 241.35 64.6 241.35 131.87 218.82 131.87 218.82 64.6 197.56 64.6"/>
+      </svg>
+      <span>GiveMoreTraining.</span>
+    </a>
+    <p>5252 Mexico Road, St. Peters, MO 63376 &middot; &copy; <span id="year">2026</span> Give More Training</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <a class="btn" href="#book" tabindex="-1">Book a session &middot; $40</a>
+</div>
+
+<script src="https://online.gmbm.com/js/form_embed.js" async id="embed-script"></script>
+<script>
+(function () {
+  var mount = document.getElementById('calendar-mount');
+  var frame = mount.querySelector('iframe');
+  var book = document.getElementById('book');
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // The embed script hides the iframe while the widget renders, then sets it visible.
+  // Keep the placeholder up until then and crossfade to the calendar. A failed script
+  // load shows the plain iframe instead of a spinner forever.
+  var done = false;
+  var observer = new MutationObserver(function () {
+    if (frame.style.visibility === 'visible') reveal();
+  });
+  function reveal() {
+    if (done) return;
+    done = true;
+    observer.disconnect();
+    mount.classList.remove('is-loading');
+    mount.classList.add('is-ready');
+    setTimeout(function () {
+      var sk = mount.querySelector('.cal-skeleton');
+      if (sk) sk.remove();
+    }, 500);
+  }
+  observer.observe(frame, { attributes: true, attributeFilter: ['style'] });
+  if (frame.style.visibility === 'visible') reveal();
+  setTimeout(reveal, 12000);
+  document.getElementById('embed-script').addEventListener('error', reveal);
+
+  // The widget swaps views inside the iframe (dates -> times -> form) and the embed
+  // script resizes it. If the visitor had scrolled past the top of the widget, the new
+  // view would start off-screen, so bring the top of the widget back into view.
+  if ('ResizeObserver' in window) {
+    var lastHeight = 0;
+    new ResizeObserver(function () {
+      var h = frame.offsetHeight;
+      if (lastHeight && Math.abs(h - lastHeight) > 40) {
+        var top = frame.getBoundingClientRect().top;
+        if (top < 0) window.scrollBy({ top: top - 12, behavior: 'smooth' });
+      }
+      lastHeight = h;
+    }).observe(frame);
+  }
+
+  // Show the floating booking button once the calendar has scrolled up out of view,
+  // and tuck it away while the closing call to action (its own button) is on screen.
+  var sticky = document.getElementById('sticky-cta');
+  var stickyLink = sticky.querySelector('a');
+  var finalCta = document.querySelector('.final');
+  if ('IntersectionObserver' in window) {
+    var pastCalendar = false;
+    var atFinal = false;
+    var update = function () {
+      var show = pastCalendar && !atFinal;
+      sticky.classList.toggle('is-visible', show);
+      sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
+      stickyLink.tabIndex = show ? 0 : -1;
+    };
+    new IntersectionObserver(function (entries) {
+      var e = entries[0];
+      pastCalendar = !e.isIntersecting && e.boundingClientRect.top < 0;
+      update();
+    }).observe(book);
+    new IntersectionObserver(function (entries) {
+      atFinal = entries[0].isIntersecting;
+      update();
+    }).observe(finalCta);
+  }
+})();
+</script>
+</body>
+</html>
